@@ -3,25 +3,23 @@ import sys
 from collections import deque
 sys.stdin = open('input.txt', 'r')
 
+
 def bfs(n):
-    stack = deque([(n, 0)])
-    visited = [False] * 200001
-    result = 0
-    while stack:
-        current, cnt = stack.popleft()
+    queue = deque([(n, 0)])
+    visited = [False] * 100001
+    while queue:
+        current, cnt = queue.popleft()
         if current == K:
-            result = cnt
-            break
-        if 0 <= current - 1 <= 200000 and not visited[current-1]:
-            stack.append((current - 1, cnt + 1))
+            return cnt
+        if 0 <= current - 1 and not visited[current-1]:
+            queue.append((current - 1, cnt + 1))
             visited[current-1] = True
-        if 0 <= current + 1 <= 200000 and not visited[current+1]:
-            stack.append((current + 1, cnt + 1))
+        if current + 1 <= K+1 and not visited[current+1]:
+            queue.append((current + 1, cnt + 1))
             visited[current+1] = True
-        if 0 <= current * 2 <= 200000 and not visited[current*2]:
-            stack.append((current * 2, cnt + 1))
+        if current * 2 <= K+1 and not visited[current*2]:
+            queue.append((current * 2, cnt + 1))
             visited[current*2] = True
-    return result
 
 
 N, K = map(int, input().split())
