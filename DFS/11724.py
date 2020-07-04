@@ -27,7 +27,24 @@ for k in range(1, N+1):
 print(cnt)
 
 
-
+N, M = map(int, input().split())
+graph = [[] for _ in range(N+1)]
+adj = [0] * (N+1)
+for m in range(M):
+    u, v = map(int, input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+cnt = 0
+for i in range(1, N+1):
+    if adj[i] == 0:
+        stack = [i]
+        cnt += 1
+        while stack:
+            current = stack.pop()
+            if adj[current] == 0:
+                adj[current] = 1
+                stack += graph[current]
+print(cnt)
 
 
 

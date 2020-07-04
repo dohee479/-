@@ -7,18 +7,18 @@ sys.stdin = open('input.txt', 'r')
 def bfs():
     dx = [0, 0, -1, 1]
     dy = [-1, 1, 0, 0]
-    stack = deque()
+    queue = deque()
     for x in range(N):
         for y in range(M):
             if tomato[x][y] == 1:
-                stack.append((x, y))
-    while stack:
-        x, y = stack.popleft()
+                queue.append((x, y))
+    while queue:
+        x, y = queue.popleft()
         for direct in range(4):
             nx = x + dx[direct]
             ny = y + dy[direct]
             if 0 <= nx < N and 0 <= ny < M and tomato[nx][ny] == 0:
-                stack.append((nx, ny))
+                queue.append((nx, ny))
                 tomato[nx][ny] = tomato[x][y] + 1
     cnt = 0
     for i in range(N):
@@ -26,10 +26,10 @@ def bfs():
             if tomato[i][j] != 0:
                 cnt += 1
     if cnt == N * M:
-        print(tomato[x][y] - 1)
+        return tomato[x][y] - 1
     else:
-        print(-1)
-    # for t in tomato:
+        return -1
+    # for t in tomato:qorwn
     #     if 0 in t:
     #         print(-1)
     #         break
@@ -39,7 +39,7 @@ def bfs():
 
 M, N = map(int, input().split())
 tomato = [list(map(int, input().split())) for _ in range(N)]
-bfs()
+print(bfs())
 
 # M, N = map(int, input().split())
 # stack = deque()
