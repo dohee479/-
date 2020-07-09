@@ -1,49 +1,60 @@
 # 유기농 배추
 import sys
-sys.stdin = open('../input.txt', 'r')
+from collections import deque
+input = sys.stdin.readline
+sys.stdin = open('input.txt', 'r')
+
+
+def dfs(x, y):
+    dx = [-1, 1, 0, 0]
+    dy = [0, 0, -1, 1]
+    stack = deque()
+    stack.append((x, y))
+    while stack:
+        x, y = stack.pop()
+        for direct in range(4):
+            nx = x + dx[direct]
+            ny = y + dy[direct]
+            if 0 <= nx < N and 0 <= ny < M and farm[nx][ny] == 1:
+                farm[nx][ny] = 0
+                stack.append((nx, ny))
+
+
+def bfs(x, y):
+    dx = [-1, 1, 0, 0]
+    dy = [0, 0, -1, 1]
+    queue = deque()
+    queue.append((x, y))
+    while queue:
+        x, y = queue.popleft()
+        for direct in range(4):
+            nx = x + dx[direct]
+            ny = y + dy[direct]
+            if 0 <= nx < N and 0 <= ny < M and farm[nx][ny] == 1:
+                farm[nx][ny] = 0
+                queue.append((nx, ny))
+
+
 T = int(input())
 for t in range(1, 1+T):
     M, N, K = map(int, input().split())
-    arr = [[0] * M for _ in range(N)]
+    farm = [[0] * M for _ in range(N)]
     for _ in range(K):
-        r, c = map(int, input().split())
-        arr[c][r] = 1
-    dx = [0, 1, 0, -1]
-    dy = [1, 0, -1, 0]
-    stack = []
-    direct = 0
-    count = 0
+        n1, n2 = map(int, input().split())
+        farm[n2][n1] = 1
     cnt = 0
-    for c in range(N):
-        for r in range(M):
-            res = True
-            if arr[c][r] == 1:
-                direct = 0
-                while res:
-                    if arr[c][r] == 1:
-                        stack.append(c)
-                        stack.append(r)
-
-                        dc = c + dx[direct]
-                        dr = r + dy[direct]
-                        if dc >= N or dr >= M or dc < 0 or dr < 0 or arr[dc][dr] == 0:
-                            direct = (direct+1) % 4
-                            dc = c + dx[direct]
-                            dr = r + dy[direct]
-                            count += 1
-                        c = dc
-                        r = dr
-                    if count >= 1 and arr[c][r] == 0:
-                        count = 0
-                        for k in range(len(stack)//2):
-                            pr = stack.pop()
-                            pc = stack.pop()
-                            arr[pc][pr] = 0
-                            if not stack:
-                                cnt += 1
-                                res = False
-
+    for i in range(N):
+        for j in range(M):
+            if farm[i][j] == 1:
+                farm[i][j] = 0
+                cnt += 1
+                dfs(i, j)
     print(cnt)
+
+
+
+
+
 
 
 

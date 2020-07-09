@@ -23,25 +23,25 @@ def combi(cnt):
 
 
 def bfs():
-    stack = deque()
+    queue = deque()
     adj = [[0] * M for _ in range(N)]
     for i in range(N):
         for j in range(M):
             if lab[i][j] == 2:
-                stack.append((i, j))
+                queue.append((i, j))
                 adj[i][j] = 1
             if lab[i][j] == 1:
                 adj[i][j] = 1
     dx = [0, 0, -1, 1]
     dy = [-1, 1, 0, 0]
-    while stack:
-        x, y = stack.popleft()
+    while queue:
+        x, y = queue.popleft()
         for direct in range(4):
             nx = x + dx[direct]
             ny = y + dy[direct]
             if 0 <= nx < N and 0 <= ny < M and lab[nx][ny] == 0 and adj[nx][ny] == 0:
                 adj[nx][ny] = 1
-                stack.append((nx, ny))
+                queue.append((nx, ny))
     count = 0
     for i in range(N):
         for j in range(M):
