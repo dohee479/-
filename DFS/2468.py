@@ -2,32 +2,13 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-def dfs(x, y):
-    dx = [0, 1, 0, -1]
-    dy = [1, 0, -1, 0]
-    stack = [(x, y)]
-    visited[x][y] = 1
-    while len(stack) > 0:
-        if rain[x][y] <= height:
-            rain[x][y] = 0
-        for direct in range(4):
-            nx = x + dx[direct]
-            ny = y + dy[direct]
-            if 0 <= nx < N and 0 <= ny < N and rain[nx][ny] > height and visited[nx][ny] == 0:
-                stack.append((x, y))
-                visited[nx][ny] = 1
-                x = nx
-                y = ny
-                break
-        else:
-            x, y = stack.pop()
 
 def dfs(x, y):
     dx = [0, 1, 0, -1]
     dy = [1, 0, -1, 0]
     stack = [(x, y)]
     visited[x][y] = 1
-    while len(stack) > 0:
+    while stack:
         if rain[x][y] <= height:
             rain[x][y] = 0
         for direct in range(4):
