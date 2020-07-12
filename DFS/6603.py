@@ -14,10 +14,10 @@ def lotto(idx, n, m):
         if visited[i] == 1:
             continue
         num[idx] = S[i]
-        for j in range(i+1):
+        for j in range(1, i+1):
             visited[j] = 1
         lotto(idx+1, n, m)
-        for j in range(n+1):
+        for j in range(1, n+1):
             visited[j] = 0
 
 

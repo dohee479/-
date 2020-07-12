@@ -1,5 +1,4 @@
 # 경로 찾기
-
 import sys
 sys.stdin = open('input.txt', 'r')
 
