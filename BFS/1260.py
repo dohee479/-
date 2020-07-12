@@ -8,8 +8,8 @@ def dfs(v):
     result = [v]
     stack = [v]
     visited[v] = 1
-    while len(stack) > 0:
-        current = stack[-1]
+    while stack:
+        current = stack.pop()
         for i in range(1, N+1):
             if graph[current][i] == 1 and visited[i] == 0:
                 stack.append(i)
@@ -23,13 +23,13 @@ def dfs(v):
 
 def bfs(v):
     result = [v]
-    stack = [v]
+    queue = [v]
     adj[v] = 1
-    while len(stack) > 0:
-        current = stack.pop(0)
+    while queue:
+        current = queue.pop(0)
         for i in range(1, N+1):
             if graph[current][i] == 1 and adj[i] == 0:
-                stack.append(i)
+                queue.append(i)
                 adj[i] = 1
                 result.append(i)
     print(' '.join(map(str, result)))
