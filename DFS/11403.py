@@ -10,10 +10,10 @@ def dfs(v):
         if visited[current] == 0:
             visited[current] = 1
             stack += line[current]
-            if i != current:
-                result[i][current] = 1
-            if graph[current][i] == 1:
-                result[i][i] = 1
+            if v != current:
+                result[v][current] = 1
+            if graph[current][v] == 1:
+                result[v][v] = 1
 
 
 N = int(input())
