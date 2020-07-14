@@ -10,14 +10,11 @@ def dfs(v):
     visited[v] = 1
     while stack:
         current = stack.pop()
-        for i in range(1, N+1):
+        for i in range(N+1, 0, -1):
             if graph[current][i] == 1 and visited[i] == 0:
                 stack.append(i)
                 visited[i] = 1
                 result.append(i)
-                break
-        else:
-            stack.pop()
     print(' '.join(map(str, result)))
 
 
