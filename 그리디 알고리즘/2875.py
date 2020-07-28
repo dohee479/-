@@ -20,12 +20,3 @@ while N_minus >= 0:
     N_minus -= 1
     M_minus += 1
 print(result)
-
-# a, b, c = map(int, input().split(' '))
-# while c > 0:
-#     if a // 2 >= b:
-#         a -= 1
-#     else:
-#         b -= 1
-#     c -= 1
-# print(min(a//2, b))
