@@ -63,67 +63,34 @@ sys.stdin = open('input.txt', 'r')
 #     print(num)
 
 
-# 세번째 quick sort
-def quick_sort(arr, start, end):
-    if end <= start:
-        return arr
-    pivot = arr[(start + end) // 2]
-
-    left = start
-    right = end
-    while left <= right:
-        while arr[left] < pivot:
-            left += 1
-        while arr[right] > pivot:
-            right -= 1
-        if start <= end:
-            arr[left], arr[right] = arr[right], arr[left]
-            left, right = left + 1, right - 1
-    quick_sort(arr, start, left - 1)
-    quick_sort(arr, left, end)
-
-
-N = int(input())
-arr = [int(input()) for _ in range(N)]
-quick_sort(arr, 0, len(arr) - 1)
-for num in arr:
-    print(num)
-
-# n=int(sys.stdin.readline())
-# num_list=[]
-# while(n>0):#인자를 받아서 리스트에 담는다
-#     n-=1
-#     num_list.append(int(sys.stdin.readline()))
-#
-# def quick_sort(li,start,end):
-#
+# 세번째 quick sort (pypy3)
+# def quick_sort(arr, start, end):
 #     if end <= start:
-#         return li
+#         return arr
+#     pivot = arr[(start + end) // 2]
 #
-#     pivot = li[(start + end) // 2]#가운데 값을 피벗으로
-#
-#     left=start
-#     right=end
+#     left = start
+#     right = end
 #     while left <= right:
-#         while li[left] < pivot:
+#         while arr[left] < pivot:
 #             left += 1
-#         while li[right] > pivot:
+#         while arr[right] > pivot:
 #             right -= 1
-#         print(li)
-#         if left <= right: #left와 right가 교차하지 않았으면
-#             li[left], li[right] = li[right], li[left]
+#         if start <= end:
+#             arr[left], arr[right] = arr[right], arr[left]
 #             left, right = left + 1, right - 1
+#     quick_sort(arr, start, left - 1)
+#     quick_sort(arr, left, end)
 #
 #
-#
-#     quick_sort(li,start, left - 1)
-#     quick_sort(li,left, end)
-#
-#
-# quick_sort(num_list,0,len(num_list)-1)
-#
-# for i in num_list:
-#     print(i)
+# N = int(input())
+# arr = [int(input()) for _ in range(N)]
+# quick_sort(arr, 0, len(arr) - 1)
+# for num in arr:
+#     print(num)
+
+
+
 
 
 
