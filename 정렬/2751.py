@@ -1,6 +1,7 @@
 # 수 정렬하기 2
 import sys
 sys.stdin = open('input.txt', 'r')
+# input = sys.stdin.readline
 
 # 첫번째 radix sort
 def counting_sort(arr, digit):
@@ -41,58 +42,58 @@ for num in arr:
 
 
 # 두번째 quick sort
-# def quick_sort(arr):
-#     if len(arr) <= 1:
-#         return arr
-#     pivot = arr[len(arr) // 2]
-#     small_num, equal, large_num = [], [], []
-#     for num in arr:
-#         if num < pivot:
-#             small_num.append(num)
-#         elif num > pivot:
-#             large_num.append(num)
-#         else:
-#             equal.append(num)
-#     return quick_sort(small_num) + equal + quick_sort(large_num)
-#
-#
-# N = int(input())
-# arr = [int(input()) for _ in range(N)]
-# result = quick_sort(arr)
-# for num in result:
-#     print(num)
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    small_num, equal, large_num = [], [], []
+    for num in arr:
+        if num < pivot:
+            small_num.append(num)
+        elif num > pivot:
+            large_num.append(num)
+        else:
+            equal.append(num)
+    return quick_sort(small_num) + equal + quick_sort(large_num)
+
+
+N = int(input())
+arr = [int(input()) for _ in range(N)]
+result = quick_sort(arr)
+for num in result:
+    print(num)
 
 
 # 세번째 quick sort
-# def quick_sort(arr):
-#     def sort(low, high):
-#         if high <= low:
-#             return
-#
-#         mid = partition(low, high)
-#         sort(low, mid - 1)
-#         sort(mid, high)
-#
-#     def partition(low, high):
-#         pivot = arr[(low + high) // 2]
-#         while low <= high:
-#             while arr[low] < pivot:
-#                 low += 1
-#             while arr[high] > pivot:
-#                 high -= 1
-#             if low <= high:
-#                 arr[low], arr[high] = arr[high], arr[low]
-#                 low, high = low + 1, high - 1
-#         return low
-#
-#     return sort(0, len(arr) - 1)
+def quick_sort(arr):
+    def sort(low, high):
+        if high <= low:
+            return
+
+        mid = partition(low, high)
+        sort(low, mid - 1)
+        sort(mid, high)
+
+    def partition(low, high):
+        pivot = arr[(low + high) // 2]
+        while low <= high:
+            while arr[low] < pivot:
+                low += 1
+            while arr[high] > pivot:
+                high -= 1
+            if low <= high:
+                arr[low], arr[high] = arr[high], arr[low]
+                low, high = low + 1, high - 1
+        return low
+
+    return sort(0, len(arr) - 1)
 
 
-# N = int(input())
-# arr = [int(input()) for _ in range(N)]
-# quick_sort(arr, 0, len(arr) - 1)
-# for num in arr:
-#     print(num)
+N = int(input())
+arr = [int(input()) for _ in range(N)]
+quick_sort(arr, 0, len(arr) - 1)
+for num in arr:
+    print(num)
 
 
 
