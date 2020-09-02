@@ -4,7 +4,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
-def seq(idx, n , m):
+def seq(idx, n, m):
     if idx == m:
         for i in range(m):
             print(num[i], end=' ')
