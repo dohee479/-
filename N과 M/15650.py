@@ -27,3 +27,5 @@ visited = [0] * (N+1)
 num = [0] * M
 stack = []
 seq(0, N, M)
+
+
