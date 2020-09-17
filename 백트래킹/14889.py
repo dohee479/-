@@ -82,7 +82,6 @@ def backtrack(idx, index):
         visited[i] = 0
 
 
-
 N = int(input())
 team_1 = [0] * (N//2)
 visited = [0] * N
