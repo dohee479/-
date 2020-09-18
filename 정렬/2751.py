@@ -91,7 +91,7 @@ def quick_sort(arr):
 
 N = int(input())
 arr = [int(input()) for _ in range(N)]
-quick_sort(arr, 0, len(arr) - 1)
+quick_sort(arr)
 for num in arr:
     print(num)
 
