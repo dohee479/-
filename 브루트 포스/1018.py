@@ -7,44 +7,20 @@ chess = [list(input()) for _ in range(N)]
 result = float('inf')
 for i in range(N-7):
     for j in range(M-7):
-        cnt = 0
-        for k in range(i, i+7):
-            for l in range(j, j+7):
-                if 
-                if j % 2:
-                    if k == i and l == j:
-                        if chess[k][l] == 'W':
-                            if l % 2:
-                                if chess[k][l] != 'W':
-                                    cnt += 1
-                            else:
-                                if chess[k][l] != 'B':
-                                    cnt += 1
-                        else:
-                            if l % 2:
-                                if chess[k][l] != 'B':
-                                    cnt += 1
-                            else:
-                                if chess[k][l] != 'W':
-                                    cnt += 1
-
+        start_w, start_b = 0, 0
+        for k in range(i, i+8):
+            for l in range(j, j+8):
+                if (k + l - i - j) % 2:
+                    if chess[k][l] == 'W':
+                        start_w += 1
+                    else:
+                        start_b += 1
                 else:
-                    if k == i and l == j:
-                        if chess[k][l] == 'W':
-                            if l % 2:
-                                if chess[k][l] != 'B':
-                                    cnt += 1
-                            else:
-                                if chess[k][l] != 'w':
-                                    cnt += 1
-                        else:
-                            if l % 2:
-                                if chess[k][l] != 'W':
-                                    cnt += 1
-                            else:
-                                if chess[k][l] != 'B':
-                                    cnt += 1
-        result = min(result, cnt)
+                    if chess[k][l] == 'B':
+                        start_w += 1
+                    else:
+                        start_b += 1
+        result = min(result, start_w, start_b)
 print(result)
 
 
