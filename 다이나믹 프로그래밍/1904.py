@@ -2,7 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-# 메모뢰 초과
+# 메모리 초과
 # def tile(n, result):
 #     global cnt
 #     binary = ['00', '1']
