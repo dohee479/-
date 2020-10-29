@@ -21,12 +21,6 @@ def dp():
     return max(triangle[n - 1])
 
 
-n = int(input())
-triangle = []
-for _ in range(n):
-    triangle.append(list(map(int, input().split())))
-print(dp())
-
 
 def solution():
     import sys
@@ -42,3 +36,10 @@ def solution():
 
 
 solution()
+
+n = int(input())
+triangle = []
+for _ in range(n):
+    triangle.append(list(map(int, input().split())))
+print(dp())
+
