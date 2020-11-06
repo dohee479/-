@@ -7,13 +7,11 @@ N = int(input())
 cnt = 0
 for _ in range(N):
     word = input().upper()
-    for i in range(len(word) - 1):
-        if not alpha[word[i]]:
-            if word[i] != word[i + 1]:
-                alpha[word[i]] = 1
-        else:
-            break
-    cnt += 1
+    for i in range(len(word)):
+        for j in range(len(word)):
+            if word[i] == word[j]:
+                if abs(i - j) > 1:
+                    break
 print(cnt)
 
 
