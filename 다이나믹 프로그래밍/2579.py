@@ -4,6 +4,8 @@ sys.stdin = open('input.txt', 'r')
 
 
 def dp():
+    for i, value in enumerate(stairs):
+        pass
     return
 
 
