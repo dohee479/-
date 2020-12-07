@@ -22,3 +22,14 @@ def dp(n):
 N = int(input())
 stairs = [int(input()) for _ in range(N)]
 print(dp(N))
+
+
+a, b, c = 0, 0, 0
+
+n = int(input())
+for _ in range(n):
+    pb = int(input())
+    d_0, d_1, d_2 = max(b, c), a+pb, b+pb
+    a, b, c = d_0, d_1, d_2
+
+print(max(d_2, d_1))
