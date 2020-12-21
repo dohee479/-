@@ -24,7 +24,7 @@ visited = [[0] * N for _ in range(N)]
 cnt = 0
 for i in range(N):
     for j in range(N):
-        if (Color[i][j] == 'R' or Color[i][j] == 'B' or Color[i][j] == 'G') and visited[i][j] == 0:
+        if (Color[i][j] == 'R' or Color[i][j] == 'G' or Color[i][j] == 'B') and visited[i][j] == 0:
             cnt += 1
             color = Color[i][j]
             dfs(i, j, color)
