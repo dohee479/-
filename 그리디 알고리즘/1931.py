@@ -7,8 +7,8 @@ meeting = sorted([list(map(int, sys.stdin.readline().split())) for i in range(N)
 # meeting = sorted(meeting, key=lambda time: time[0])
 # meeting = sorted(meeting, key=lambda time: time[1])
 
-end = 0
 cnt = 0
+end = 0
 for m in meeting:
     if m[0] >= end:
         end = m[1]
