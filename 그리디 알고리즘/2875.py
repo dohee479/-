@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 N, M, K = map(int, input().split())
 N_minus = K
 M_minus = 0
