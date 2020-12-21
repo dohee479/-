@@ -1,5 +1,4 @@
 # N과 M(2)
-
 import sys
 sys.stdin = open('input.txt', 'r')
 
