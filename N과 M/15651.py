@@ -1,7 +1,7 @@
 # N과 M(3)
-
 import sys
 sys.stdin = open('input.txt', 'r')
+
 
 def seq(idx, n, m):
     if idx == m:
