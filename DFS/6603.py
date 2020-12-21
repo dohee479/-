@@ -25,7 +25,7 @@ res = True
 while res:
     S = list(map(int, input().split()))
     N = S[0]
-    visited = [0] * (len(S)+1)
+    visited = [0] * (len(S) + 1)
     num = [0] * 6
     if N == 0:
         res = False
