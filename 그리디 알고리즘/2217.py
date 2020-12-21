@@ -13,6 +13,7 @@ while i < N:
     i += 1
 print(max_weight)
 
+
 # n = int(input())
 # rope = [0] * 10001
 # for _ in range(n):
