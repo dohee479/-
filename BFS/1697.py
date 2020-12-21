@@ -5,8 +5,8 @@ sys.stdin = open('input.txt', 'r')
 
 
 def bfs(n):
-    queue = deque([(n, 0)])
     visited = [False] * 100001
+    queue = deque([(n, 0)])
     while queue:
         current, cnt = queue.popleft()
         if current == K:
