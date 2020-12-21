@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 def water():
     dx = [-1, 1, 0, 0]
     dy = [0, 0, 1, -1]
