@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 money = int(input())
 change = 1000 - money
 cnt = 0
