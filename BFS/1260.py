@@ -47,6 +47,7 @@ for m in range(M):
 dfs(V)
 bfs(V)
 
+
 # 인접리스트
 def dfs(v):
     stack = [v]
@@ -58,6 +59,7 @@ def dfs(v):
             visited[current] = 1
             result.append(current)
     print(' '.join(map(str, result)))
+
 
 def bfs(v):
     queue = [v]
