@@ -3,6 +3,7 @@ import sys
 from collections import deque
 sys.stdin = open('input.txt', 'r')
 
+
 def combi(cnt):
     if cnt == 3:
         if bfs() > result[0]:
