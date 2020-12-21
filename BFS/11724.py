@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 N, M = map(int, input().split())
 graph = [[0] * (N+1) for _ in range(N+1)]
 adj = [0] * (N+1)
