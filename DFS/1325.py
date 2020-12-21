@@ -3,6 +3,7 @@ import sys
 from collections import deque
 sys.stdin = open('input.txt', 'r')
 
+
 def dfs(v):
     visited = [0] * (N + 1)
     stack = deque([v])
