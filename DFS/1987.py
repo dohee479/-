@@ -1,7 +1,7 @@
 # 알파벳
 import sys
 from collections import deque
-input = sys.stdin.readline
+# input = sys.stdin.readline
 sys.stdin = open('input.txt', 'r')
 
 
