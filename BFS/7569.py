@@ -3,6 +3,7 @@ import sys
 from collections import deque
 sys.stdin = open('input.txt', 'r')
 
+
 def bfs():
     dz = [-1, 1, 0, 0, 0, 0]
     dx = [0, 0, -1, 1, 0, 0]
