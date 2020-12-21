@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 def danzi(x, y):
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
