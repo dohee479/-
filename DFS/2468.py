@@ -16,8 +16,9 @@ def dfs(x, y):
             nx = x + dx[direct]
             ny = y + dy[direct]
             if 0 <= nx < N and 0 <= ny < N and rain[nx][ny] > height and visited[nx][ny] == 0:
-                stack.append((nx, ny))
                 visited[nx][ny] = 1
+                stack.append((nx, ny))
+
 
 
 N = int(input())
