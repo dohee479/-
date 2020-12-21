@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 def dfs(v):
     visited = [0] * N
     stack = [v]
