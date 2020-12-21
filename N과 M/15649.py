@@ -26,15 +26,6 @@ num = [0] * M
 seq(0, N, M)
 
 
-
-
-
-
-
-
-
-
-
 # def nm(idx, n, m):
 #     if idx == m:
 #         for i in range(m):
