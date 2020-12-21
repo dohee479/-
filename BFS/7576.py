@@ -25,7 +25,6 @@ def bfs():
         for j in range(M):
             if tomato[i][j] != 0:
                 cnt += 1
-
     if cnt == N * M:
         return tomato[x][y] - 1
     else:
