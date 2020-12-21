@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 def bfs(x, y):
     dx = [0, 0, -1, 1]
     dy = [-1, 1, 0, 0]
