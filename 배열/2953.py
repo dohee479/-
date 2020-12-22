@@ -1,9 +1,8 @@
 # 나는 요리사다
 import sys
 sys.stdin = open('input.txt', 'r')
+
 N = 5
-
-
 max_num = []
 for n in range(1, N+1):
     num = list(map(int, input().split()))
