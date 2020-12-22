@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 # 위에서 
 def dp():
     for i in range(n-1):
