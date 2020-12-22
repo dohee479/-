@@ -3,6 +3,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
+
 def padovan(n):
     numbers = [1] * n
     for i in range(3, n):
