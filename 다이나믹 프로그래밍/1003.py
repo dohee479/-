@@ -3,6 +3,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
+# 리스트 이용
 def fibo(n):
     if n == 0:
         return '1 0'
@@ -14,7 +15,7 @@ def fibo(n):
         numbers[i] = numbers[i - 1] + numbers[i - 2]
     return '{} {}'.format(numbers[n - 1], numbers[n])
 
-
+# 리스트 없이
 def fibo(n):
     if n == 0:
         return '1 0'
