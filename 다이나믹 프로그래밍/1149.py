@@ -14,5 +14,4 @@ def rgb():
 N = int(input())
 home = [list(map(int, input().split())) for _ in range(N)]
 print(rgb())
-print(home)
 
