@@ -18,7 +18,7 @@ for i in range(len(max_num)):
     if max_num[i] > max_number:
         max_number = max_num[i]
         idx = i
-print(idx+1, max_number)
+print(idx + 1, max_number)
 
 
 
