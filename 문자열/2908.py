@@ -1,4 +1,4 @@
-#상수
+# 상수
 import sys
 sys.stdin = open('input.txt', 'r')
 
