@@ -25,14 +25,14 @@ for i in range(len(Team)):
     if i == 0 and Team[i] == 1:
         cnt1 += 1
         if Team[i+1] == 1:
-            M1 = 
-
+            pass
 
 
 
     elif i == 0 and Team[i] == 2:
         cnt2 += 1
-        if Team[i+1] ==2:
+        if Team[i+1] == 2:
+            pass
 
 
 
