@@ -3,6 +3,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
+
 def fibo(n):
     numbers = [0] * (n+1)
     numbers[1] = 1
