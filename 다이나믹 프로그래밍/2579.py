@@ -25,7 +25,6 @@ print(dp(N))
 
 
 a, b, c = 0, 0, 0
-
 n = int(input())
 for _ in range(n):
     pb = int(input())
