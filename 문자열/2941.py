@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-
 croatia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 word = input()
 for c in croatia:
