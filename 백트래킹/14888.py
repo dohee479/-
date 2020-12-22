@@ -2,7 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 # input = sys.stdin.readline
-# sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**6)
 
 
 def backtrack(index, result):
