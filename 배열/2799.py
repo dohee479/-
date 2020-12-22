@@ -10,7 +10,7 @@ for i in range(5*M+1):
     for w in word:
         line.append(w)
     Apartment.append(line)
-arr = [0]*5
+arr = [0] * 5
 for i in range(1, 5*M+1, 5):
     for j in range(1, 5*N+1, 5):
         cnt = 0
