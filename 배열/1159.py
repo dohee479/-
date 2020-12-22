@@ -12,6 +12,7 @@ for n in range(N):
         if arr[i] not in arr1:
             arr1.append(arr[i])
             arr1.sort()
+            
 cnt = 0
 for i in range(len(arr1)):
     if arr.count(arr1[i]) >= 5:
