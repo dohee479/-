@@ -3,56 +3,57 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
-# def Queen(r):
-#     global count
-#     if r == N:
-#         count += 1
-#         return
-#     for i in range(N):
-#         if check[r][i] != 0:
-#             continue
-#         marking(r, i)
-#         Queen(r+1)
-#         un_marking(r, i)
-#
-#
-# def marking(r, c):
-#     for i in range(N):
-#         check[r][i] += 1
-#     for i in range(N):
-#         check[i][c] += 1
-#     left = c-1
-#     right = c+1
-#     for i in range(r+1, N):
-#         if left >= 0:
-#             check[i][left] += 1
-#         if right < N:
-#             check[i][right] += 1
-#         left -= 1
-#         right += 1
-#
-#
-# def un_marking(r, c):
-#     for i in range(N):
-#         check[r][i] -= 1
-#     for i in range(N):
-#         check[i][c] -= 1
-#     left = c-1
-#     right = c+1
-#     for i in range(r+1, N):
-#         if left >= 0:
-#             check[i][left] -= 1
-#         if right < N:
-#             check[i][right] -= 1
-#         left -= 1
-#         right += 1
-#
-#
-# N = int(input())
-# check = [[0] * N for _ in range(N)]
-# count = 0
-# Queen(0)
-# print(count)
+def Queen(r):
+    global count
+    if r == N:
+        count += 1
+        return
+    for i in range(N):
+        if check[r][i] != 0:
+            continue
+        marking(r, i)
+        Queen(r+1)
+        un_marking(r, i)
+
+
+def marking(r, c):
+    for i in range(N):
+        check[r][i] += 1
+    for i in range(N):
+        check[i][c] += 1
+    left = c-1
+    right = c+1
+    for i in range(r+1, N):
+        if left >= 0:
+            check[i][left] += 1
+        if right < N:
+            check[i][right] += 1
+        left -= 1
+        right += 1
+
+
+def un_marking(r, c):
+    for i in range(N):
+        check[r][i] -= 1
+    for i in range(N):
+        check[i][c] -= 1
+    left = c-1
+    right = c+1
+    for i in range(r+1, N):
+        if left >= 0:
+            check[i][left] -= 1
+        if right < N:
+            check[i][right] -= 1
+        left -= 1
+        right += 1
+
+
+N = int(input())
+check = [[0] * N for _ in range(N)]
+count = 0
+Queen(0)
+print(count)
+
 
 def queen(row):
     global cnt
