@@ -16,7 +16,7 @@ for i in range(1, N):
             min_size = Asc[i]
         else:
             Asc_size = Asc[i] - min_size
-            if Asc[i-1] > Asc[i]:
+            if Asc[i - 1] > Asc[i]:
                 min_size = Asc[i]
     if Asc_size > result:
         result = Asc_size
