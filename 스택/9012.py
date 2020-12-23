@@ -2,27 +2,31 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
+def check(target):
+    stack = list()
+    for i in range(len(target)):
+        if target[i] == '(':
+            stack.append(target[i])
+        elif target[i] == ')':
+            if len(stack) == 0:
+                return False
+            tmp = stack.pop()
+            if target[i] == ')' and tmp == '(':
+                continue
+            return False
+    if len(stack) > 0:
+        return False
+    return True
+
+
 N = int(input())
 for _ in range(N):
     word = input()
-    stack = []
-    for i in range(len(word)):
-        if word[i] == '(':
-            stack.append(word[i])
-        elif word[i] == ')':
-            if len(stack) == 0:
-                if i == 0:
-                    print(A)
-                else:
-                    print(A)
-                    continue
-            tmp = stack.pop()
-            if word[i] == ')' and tmp == '(':
-                continue
-    if len(stack) == 0:
-        print(B)
+    if check(word):
+        print("YES")
     else:
-        print(A)
+        print("NO")
 
 
 
