@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-
 K = int(input())
 stack = []
 for _ in range(K):
