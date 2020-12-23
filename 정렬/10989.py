@@ -15,5 +15,4 @@ for index in range(len(number)):
             print(index)
 
 
-N = int(input())
 
