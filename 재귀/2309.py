@@ -25,6 +25,7 @@ def DFS(m):
             visited[j] = 0
         result.pop()
 
+
 hobit = []
 for _ in range(9):
     num = int(input())
@@ -39,7 +40,6 @@ def DFS(m, sol):
     if len(result) == 7 and sum(result) == 100:
         a = result.copy()
         sol.append(a)
-        # sol.append(result)
         return
 
     for i in range(m):
@@ -53,6 +53,7 @@ def DFS(m, sol):
             visited[j] = 0
         result.pop()
 
+
 hobit = []
 for _ in range(9):
     hobit.append(int(input()))
@@ -61,7 +62,6 @@ visited = [0] * 9
 result = []
 sol = []
 DFS(len(hobit), sol)
-print(sol)
 for i in sol[0]:
     print(i)
 
