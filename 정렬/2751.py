@@ -3,6 +3,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 # input = sys.stdin.readline
 
+
 # 첫번째 radix sort
 def counting_sort(arr, digit):
     n = len(arr)
