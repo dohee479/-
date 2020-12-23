@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-
 def fraction(n):
     num = 0
     cnt = 1
