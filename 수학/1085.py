@@ -2,6 +2,5 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-
 x, y, w, h = map(int, input().split())
 print(min(x, y, h - y, w - x))
