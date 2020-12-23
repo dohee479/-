@@ -3,7 +3,7 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 T = int(input())
-for t in range(1, 1+T):
+for t in range(1, 1 + T):
     N, M = map(int, input().split())
     printer = list(map(int, input().split()))
     max_num = max(printer)
