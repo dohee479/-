@@ -18,6 +18,7 @@ while True:
         break
 print(result)
 
+
 n = input()
 num = int(n)
 start = max(num - 9 * len(n), 0)
