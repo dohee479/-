@@ -3,7 +3,6 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
-
 def bee(n):
     cnt = 1
     num = 1
