@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-
 while True:
     string = input()
     if string == ".":
