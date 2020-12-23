@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 N = int(input())
 bulk = [list(map(int, input().split())) for _ in range(N)]
 for i in range(N):
