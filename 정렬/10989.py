@@ -1,7 +1,7 @@
 # 수 정렬하기 3
 import sys
 sys.stdin = open('input.txt', 'r')
-input = sys.stdin.readline
+# input = sys.stdin.readline
 
 
 N = int(input())
