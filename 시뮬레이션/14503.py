@@ -42,12 +42,15 @@ r, c, d = map(int, input().split())
 room = [list(map(int, input().split())) for _ in range(N)]
 direct = {0: [0, -1, 1, 0], 1: [-1, 0, 0, -1], 2: [0, 1, -1, 0], 3: [1, 0, 0, 1]} # 북 동 남 서 (왼쪽으로 돌아야하는 방향)
 clean(r, c, d)
+
+
 # cnt = 0
 # for i in range(N):
 #     for j in range(M):
 #         if room[i][j] == 2:
 #             cnt += 1
 # print(cnt)
+
 
 def clean(x, y, dr):
     count = 0
