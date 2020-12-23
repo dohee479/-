@@ -1,8 +1,8 @@
 # 스택
 import sys
 sys.stdin = open('input.txt', 'r')
+# input = sys.stdin.readline
 
-input = sys.stdin.readline
 N = int(input())
 lst = []
 for _ in range(N):
