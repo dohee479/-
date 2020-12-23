@@ -11,7 +11,7 @@ for i in range(1, len(word)):
         stack.append(word[i])
     else:
         stack.pop()
-        if word[i-1] == '(':
+        if word[i - 1] == '(':
             cnt += len(stack)
         else:
             cnt += 1
