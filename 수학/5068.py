@@ -2,6 +2,7 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
+
 while True:
     num1, num2 = map(int, input().split())
     if not num1 and not num2:
