@@ -14,7 +14,7 @@ def star10(n):
     x = star10(n)
     a = concatenate(x, x)
     b = concatenate(x, [' ' * n] * n)
-
+    c = a + b + a
     return a + b + a
 
 
