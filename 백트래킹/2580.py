@@ -51,3 +51,4 @@ def backtrack(index):
 sudoku = [list(map(int, sys.stdin.readline().rstrip().split())) for _ in range(9)]
 zeros = [(i, j) for i in range(9) for j in range(9) if sudoku[i][j] == 0]
 backtrack(0)
+
