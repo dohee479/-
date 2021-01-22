@@ -15,6 +15,10 @@ def dp(n):
     if n == 3:
         return result[-1]
     for i in range(3, n):
+        # 기준 마지막 잔
+        # 1. 마지막 잔 + 전의 잔 + 전전전의 잔까지의 최대값
+        # 2. 마지막 잔 + 전전까지의 최대 값
+        # 3. 마지막 잔 마시지 않고 전 까지의 최대값
         result[i] = max(result[i - 3] + wine[i - 1] + wine[i], result[i - 2] + wine[i], result[i - 1])
     return result[-1]
 
