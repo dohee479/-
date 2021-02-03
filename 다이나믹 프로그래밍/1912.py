@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-# 시간초과
 n = int(input())
 seq = list(map(int, sys.stdin.readline().rstrip().split()))
 memo = [0] * n
