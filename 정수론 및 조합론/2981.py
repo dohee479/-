@@ -3,7 +3,6 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 
-# 시간초과
 # 최대공약수를 구하는 방법인 유클리드호제법
 def euclid(n1, n2):
     if n2 > n1:
@@ -15,16 +14,20 @@ def euclid(n1, n2):
 
 
 N = int(input())
-number = [int(sys.stdin.readline().rstrip()) for _ in range(N)]
-gcd = number[0]
-for i in range(1, N):
-    gcd = euclid(gcd, number[i])
-# 주어진 수들의 최대공약수의 배수, 단 첫번째 수는 포함하지 않는다.
-for i in range(gcd, number[-1] + 1, gcd):
-    remainder = number[0] % i
-    cnt = 1
-    for j in range(1, N):
-        if remainder == number[j] % i:
-            cnt += 1
-    if cnt == N:
-        print(i, end=' ')
+number = sorted([int(sys.stdin.readline().rstrip()) for _ in range(N)])
+gcd = number[1] - number[0]
+for i in range(2, N):
+    gcd = euclid(gcd, number[i] - number[i - 1])
+answer = set([gcd])
+for i in range(2, int(gcd ** 0.5) + 1):
+    if not gcd % i:
+        answer.add(i)
+        answer.add(gcd // i)
+print(' '.join(map(str, sorted(answer))))
+
+# number[0] = k[0] * M + R
+# number[1] = k[1] * M + R
+# number[2] = k[2] * M + R
+# number[1] - number[0] = M * (k[1] - k[0])
+# k[1] - k[0]은 number[1] - number[0]의 약수
+# 숫자들의 차들간의 최대공약수를 구해 약수를 구하면 된다.
