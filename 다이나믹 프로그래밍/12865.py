@@ -16,3 +16,22 @@ for i in range(1, N + 1):
         else:
             memo[i][j] = max(memo[i - 1][j], memo[i - 1][j - w] + v)
 print(memo[N][K])
+
+
+# 참조
+def solve():
+    N, max_weight = map(int, sys.stdin.readline().split())
+    dp = {0: 0}
+
+    for _ in range(N):
+        w, v = map(int, sys.stdin.readline().split())
+        tmp = {}
+        for prev_w, prev_v in dp.items():
+            if prev_w + w <= max_weight and dp.get(prev_w + w, 0) < prev_v + v:
+                tmp[prev_w + w] = prev_v + v
+        dp.update(tmp)
+
+    print(max(dp.values()))
+
+
+solve()
