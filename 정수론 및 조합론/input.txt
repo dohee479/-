@@ -1,4 +1,6 @@
+2
+0
 3
-2 2
-1 5
-13 29
+mask face
+sunglasses face
+makeup face
