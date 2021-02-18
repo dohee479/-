@@ -12,10 +12,9 @@ for _ in range(N):
     if cmd[0] == 'push_front':
         if not front:
             rear += 1
-            dequeue[0:0] = cmd[1]
+            dequeue[0:0] = [cmd[1]]
         else:
-            dequeue[front:front] = cmd[1]
-            front -= 1
+            dequeue[front:front] = [cmd[1]]
 
     elif cmd[0] == 'push_back':
         dequeue.append(cmd[1])
@@ -25,6 +24,8 @@ for _ in range(N):
         if rear >= front:
             print(dequeue[front])
             front += 1
+            if front > rear:
+                rear = front - 1
         else:
             print(-1)
 
