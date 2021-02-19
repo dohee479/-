@@ -2,7 +2,6 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 
-# pop 부분 다시 고려
 N = int(input())
 dequeue = []
 front = 0
@@ -15,6 +14,7 @@ for _ in range(N):
             dequeue[0:0] = [cmd[1]]
         else:
             dequeue[front:front] = [cmd[1]]
+            rear += 1
 
     elif cmd[0] == 'push_back':
         dequeue.append(cmd[1])
@@ -34,8 +34,7 @@ for _ in range(N):
             print(dequeue.pop())
             rear -= 1
             if front > rear:
-                front = 0
-                rear = -1
+                rear = front -1
         else:
             print(-1)
 
