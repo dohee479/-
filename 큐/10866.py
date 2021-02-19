@@ -34,7 +34,7 @@ for _ in range(N):
             print(dequeue.pop())
             rear -= 1
             if front > rear:
-                rear = front -1
+                rear = front - 1
         else:
             print(-1)
 
