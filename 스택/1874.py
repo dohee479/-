@@ -15,6 +15,8 @@ def solution():
             stack.append(cnt)
             result.append('+')
             cnt += 1
+        # 마지막에 들어간게 꼭 먼저 나와야한다.
+        # 오름차순으로만 push가 가능하기 때문이다.
         if stack.pop() != i:
             return 'NO'
         else:
