@@ -23,9 +23,12 @@ for _ in range(N):
     elif cmd[0] == 'pop_front':
         if rear >= front:
             print(dequeue[front])
-            front += 1
-            if front > rear:
-                rear = front - 1
+            dequeue[front:front + 1] = []
+            rear -= 1
+            # dequeue[front:front + 1] = [] 넣을 시 밑에는 필요없고 rear -= 1는 필요
+            # front += 1
+            # if front > rear:
+            #     rear = front - 1
         else:
             print(-1)
 
@@ -33,8 +36,8 @@ for _ in range(N):
         if rear >= front:
             print(dequeue.pop())
             rear -= 1
-            if front > rear:
-                rear = front - 1
+            # if front > rear:
+            #     rear = front - 1
         else:
             print(-1)
 
