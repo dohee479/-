@@ -16,6 +16,9 @@ def AC(command):
         elif cmd == 'D':
             if x:
                 # list.pop() 역시 원소의 수에 비례하여 소요, deque 처리
+                # pop, popleft를 해주는 대신 앞, 뒤 자를 인덱스를 계산해주어 잘라도 된다.
+                # 정위치일 때는 앞에서 빼주는 위치를 +1 해주고
+                # 역위치일 때는 뒤에서 빼주는 위치를 -1 해주면 된다. 즉 + 1 씩 해주고 총 길이에서 빼준다.
                 if flip:
                     x.pop()
                 else:
@@ -35,8 +38,8 @@ for t in range(T):
     n = sys.stdin.readline().rstrip()
     x = deque(r.findall(sys.stdin.readline().rstrip()))
     print(AC(p))
-    
-    
+
+
 
 
 
